@@ -1,0 +1,17 @@
+@mixin tablet-layout() {
+  @media screen and (min-width: 40em) and (max-width: 62.5em) {
+    @content;
+  }
+}
+
+@mixin desktop-layout() {
+  @media only screen and (min-width: 62.5em) {
+    @content;
+  }
+}
+
+@mixin columnGap($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}

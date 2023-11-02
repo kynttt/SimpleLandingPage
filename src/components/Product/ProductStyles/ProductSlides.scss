@@ -1,0 +1,85 @@
+@use "../../../scss";
+
+.swiper-container {
+  min-width: 0;
+}
+
+.lgSwiper {
+  cursor: move;
+  max-height: 33rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+@include scss.tablet-layout {
+  .lgSwiper {
+    border-radius: 12px;
+  }
+}
+
+@include scss.desktop-layout() {
+  .lgSwiper {
+    border-radius: 12px;
+  }
+}
+
+.smSwiper {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.smSwiper .swiper-slide {
+  cursor: pointer;
+  width: 25%;
+  height: 100%;
+  border-radius: 9px;
+  overflow: hidden;
+  position: relative;
+}
+
+.smSwiper .swiper-slide-thumb-active::before {
+  content: "";
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0px 0px 0px 3px scss.$orange;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  border: none;
+  border-radius: 100px;
+  width: 3.2rem;
+  height: 3.2rem;
+  padding: 1.4rem;
+}
+
+@include scss.desktop-layout() {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+.swiper-button-next img,
+.swiper-button-prev img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+}
