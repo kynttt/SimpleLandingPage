@@ -14,6 +14,4 @@
 - SASS/SCSS Modules
 - BEM Methodology
 
-## Author
 
-- Created by - okayda-jhon
